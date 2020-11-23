@@ -21,6 +21,11 @@ body {
 /*    content: '\2807';*/
 /*    font-size: 25px;*/
 /*}*/
+#msgAlert {
+    width: 10%;
+    height: 10%;
+    display: none;
+}
 
 .tableTd {
     width: 200px;

@@ -46,13 +46,13 @@ $(document).ready(function()
 
             
 
-            // $("#msgGuardian").click(function() {
-            //     $("#msgAlert").show();
-            // });
+            $("#msgGuardian").click(function() {
+                $("#msgAlert").show();
+            });
 
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    // $("#msgAlert").hide();
+                    $("#msgAlert").hide();
                     modal.style.display = "none";
                 }
             }
