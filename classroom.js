@@ -2,4 +2,9 @@ $(document).ready(function() {
 
 });
 
-$('#endClassBtn').on('click', () => window.location.href = "index.html");
+// enable bootstrap tooltips for all elements
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
+
+$('#confirmEndClassBtn').on('click', () => window.location.href = "index.html");
