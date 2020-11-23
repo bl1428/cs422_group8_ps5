@@ -1,69 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="mainLayout.css">
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/index.css">
     <title>Class Roster</title>
-    <script>
-        function myFunction()
-        {
-          //document.getElementById('sname').style.display ='none'; //first hide the button
-          var $label = $("<label>").text('Message Sent').addClass("label").attr('id', 'labels');;
-           $("#cool").append($label);
-           setTimeout(300);
-           //document.getElementById('labels').remove();
-           setTimeout(function(){ document.getElementById('labels').remove(); }, 3000);
+</head>
 
+<body>
+    <h1 class="header2"><span class="header">Class Roster</span>Your students are waiting to enter the classroom </h1>
 
-          //setTimeout(function(){ //using setTimeout function
-          //document.getElementById('btn').style.display ='inline'; //displaying the button again after 3000ms or 3 seconds
-        //}
-        //,3000); 
-        }
-    </script>
-    <script>
-        function myFunction1()
-        {
-          //document.getElementById('sname').style.display ='none'; //first hide the button
-          var $label = $("<label>").text('Message Sent').addClass("label").attr('id', 'labels2');;
-           $("#cools").append($label);
-           setTimeout(300);
-           //document.getElementById('labels').remove();
-           setTimeout(function(){ document.getElementById('labels2').remove(); }, 3000);
+    <div class="box" id="boxes">
+        <div><u>Student Name</u>&emsp;&emsp;&emsp;&emsp;&emsp;<u>Online?</u></div>
 
-
-          //setTimeout(function(){ //using setTimeout function
-          //document.getElementById('btn').style.display ='inline'; //displaying the button again after 3000ms or 3 seconds
-        //}
-        //,3000); 
-        }
-    </script>
-  </head>
-  
-  <body>
-    <h1 class ="header2"><span class = "header">Class Roster</span>Your students are waiting to enter the classroom </h1>
-    
-    <div class = "box" id ="boxes">
-        <div ><u>Student Name</u>&emsp;&emsp;&emsp;&emsp;&emsp;<u>Online?</u></div>
-        
-        <div >Adam B.&#8287&#8287&#8287_________________&#9989;</div>
+        <div>Adam B.&#8287&#8287&#8287_________________&#9989;</div>
         <div>Katya B.&#8287&#8287&#8287_________________&#9989;</div>
         <div>Lisa D.&#8287&#8287&#8287&#8287&#8287&#8287_________________&#9989;</div>
-        <div id ="cool" style = "display:inline-block">Janice K.&#8287&#8287_________________&#10060; <button class = "big" style = "display:inline-block" id="sname" onclick="myFunction()" value="Click Me";
-            ><a href="#">Click to message guardian&#8287</a></button></div>
-        <div>Kristen L.   __________________&#9989;</div>
-        <div id = "cools" style = "display:inline-block">Naween N._________________&#10060;<button class = "big" style = "display:inline-block" id="sname" onclick="myFunction1()" value="Click Me";
-            ><a href="#">Click to message guardian</a></button></div>
+        <div id="cool" style="display:inline-block">Janice K.&#8287&#8287_________________&#10060; <button class="big"
+                style="display:inline-block" id="sname" onclick="myFunction()" value="Click Me" ;><a href="#">Click to
+                    message
+                    guardian&#8287</a></button></div>
+        <div>Kristen L. __________________&#9989;</div>
+        <div id="cools" style="display:inline-block">Naween N._________________&#10060;<button class="big"
+                style="display:inline-block" id="sname" onclick="myFunction1()" value="Click Me" ;><a href="#">Click to
+                    message
+                    guardian</a></button></div>
         <div>Katie O.&#8287&#8287&#8287__________________&#9989;</div>
         <div>Haley P.&#8287&#8287&#8287&#8287_________________&#9989;</div>
         <div>Marty R.&#8287&#8287&#8287&#8287_________________&#9989;</div>
@@ -71,12 +38,58 @@
         <div>Jessie S.&#8287&emsp;________________&#9989;</div>
         <div>Sammy T.__________________&#9989;</div>
         <div>Billy W.&#8287&#8287&#8287&#8287__________________&#9989;</div>
-        <div>Amber Z.     __________________&#9989;</div>  
+        <div>Amber Z. __________________&#9989;</div>
 
-                                   
+
     </div>
-    <button class = "startClass" type = "button" id ="startClassButton"> Begin Class</button>
-    
-  </body>
-</html>
+    <div class="container d-flex justify-content-center mt-4">
+        <button class="btn btn-primary" type="button" id="startClassButton"> Begin Class</button>
+    </div>
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        function myFunction() {
+            //document.getElementById('sname').style.display ='none'; //first hide the button
+            var $label = $("<label>").text('Message Sent').addClass("label").attr('id', 'labels');;
+            $("#cool").append($label);
+            setTimeout(300);
+            //document.getElementById('labels').remove();
+            setTimeout(function () { document.getElementById('labels').remove(); }, 3000);
+
+
+            //setTimeout(function(){ //using setTimeout function
+            //document.getElementById('btn').style.display ='inline'; //displaying the button again after 3000ms or 3 seconds
+            //}
+            //,3000); 
+        }
+
+        function myFunction1() {
+            //document.getElementById('sname').style.display ='none'; //first hide the button
+            var $label = $("<label>").text('Message Sent').addClass("label").attr('id', 'labels2');;
+            $("#cools").append($label);
+            setTimeout(300);
+            //document.getElementById('labels').remove();
+            setTimeout(function () { document.getElementById('labels2').remove(); }, 3000);
+
+
+            //setTimeout(function(){ //using setTimeout function
+            //document.getElementById('btn').style.display ='inline'; //displaying the button again after 3000ms or 3 seconds
+            //}
+            //,3000); 
+        }
+
+        $('#startClassButton').on('click', () => window.location.href = "classroom.html");
+    </script>
+</body>
+
+</html>

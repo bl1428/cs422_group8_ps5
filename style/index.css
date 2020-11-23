@@ -26,16 +26,12 @@
     text-align: center;
     }
 
-.startClass{
-    border-radius: 25px;
-    height: 100px;
-    width:  300px;
-    transform: translate(180%, 80%);
-    background-color: blue;
-    font-size : 35px;
+#startClassButton {
+    font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    padding: 10px 20px;
 }
+
 #sname {
     color:red;
 }
