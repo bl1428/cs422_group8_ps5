@@ -1,0 +1,74 @@
+/* header */
+.page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #686868;
+}
+
+#endClassBtn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: normal;
+}
+
+/* page content */
+/* video panel */
+.page-container {
+    padding-left: 40px;
+}
+
+.panel {
+    height: 80vh;
+    border: 1px solid #707070;
+    background-color: #F3F3F3;
+}
+
+.video-container {
+    height: 100%;
+}
+
+.video-pane {
+    height: 150px;
+    width: 200px;
+    border: 1px solid #707070;
+    background-color: lightblue;
+    box-shadow: 2px 2px 8px #888888;
+}
+
+.video-pane > .participant-name {
+    height: 80%;
+    font-size: 20pt;
+}
+
+.video-pane > .participant-controls {
+    padding: 0px 10px;
+}
+
+.video-icon {
+    color: #606060;
+    padding: 0px 5px;
+    border: 1px solid transparent;
+}
+
+.video-icon.fa-ellipsis-h:hover {
+    border: 1px solid #007bff;
+    box-shadow: 1px 1px 3px;
+    cursor: pointer;
+}
+
+.controls-container button {
+    white-space: normal;
+    font-size: 1.5rem;
+    max-width: 100px;
+}
+
+.modal-controls-container button {
+    white-space: normal;
+    font-size: 1.25rem;
+    max-width: 120px;
+}
+
+/* participant list */
+#participantList {
+    margin-left: 50px;
+}

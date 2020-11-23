@@ -1,14 +1,26 @@
+.page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #686868;
+    padding-left: 20px;
+}
+
+.page-subtitle {
+    font-size: 1.5rem;
+    color: #a0a0a0;
+    padding-left: 40px;
+}
+
 .header {
     font-size: 50px;
     padding-left: 25px;
     padding-right: 75px;
 
  }
-.header2 {
-    padding-left: 20px;
+/* .header2 {
     font-size: 25px;
     
- }
+ } */
 
  .box{
     height:400px;
@@ -17,6 +29,7 @@
     padding: 45px;
     border-radius: 25px;
     margin: 0 auto;
+    margin-top: 20px;
     font-size : 20px;
     overflow: auto;
 }
@@ -26,16 +39,12 @@
     text-align: center;
     }
 
-.startClass{
-    border-radius: 25px;
-    height: 100px;
-    width:  300px;
-    transform: translate(180%, 80%);
-    background-color: blue;
-    font-size : 35px;
+#startClassButton {
+    font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    padding: 10px 20px;
 }
+
 #sname {
     color:red;
 }
