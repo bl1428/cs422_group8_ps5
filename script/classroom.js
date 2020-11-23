@@ -1,10 +1,5 @@
 $(document).ready(function() {
-
-});
-
-// enable bootstrap tooltips for all elements
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip() // enable all bootstrap tooltips
 });
 
 $('#confirmEndClassBtn').on('click', () => window.location.href = "index.html");
