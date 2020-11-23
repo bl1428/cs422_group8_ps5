@@ -36,7 +36,7 @@ $(document).ready(function()
                 document.getElementById(imgId).style.display = "none";
                 // $("#" + imgId).attr("src", "01.jpg")
                 // document.getElementById(tdId).append("Student" + tdId);
-                $('#' + tdId + ' .containerSt').append('<span>Student' + tdId + '</span>');
+                // $('#' + tdId + ' .containerSt').append('<span>Student' + tdId + '</span>');
             };
 
 
@@ -44,8 +44,15 @@ $(document).ready(function()
                 document.getElementById(imgId).style.display = "inline-block"
             };
 
+            
+
+            $("#msgGuardian").click(function() {
+                $("#msgAlert").show();
+            });
+
             window.onclick = function(event) {
                 if (event.target == modal) {
+                    $("#msgAlert").hide();
                     modal.style.display = "none";
                 }
             }
@@ -55,6 +62,8 @@ $(document).ready(function()
 
 
 });
+
+
 
 function popWindow(id){
     document.getElementById(id).innerHTML = '<div class="popup" onclick="myFunction()"> Click me!\n' +
