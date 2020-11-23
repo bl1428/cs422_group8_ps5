@@ -35,7 +35,8 @@ $(document).ready(function()
             stpVideo.onclick = function () {
                 document.getElementById(imgId).style.display = "none";
                 // $("#" + imgId).attr("src", "01.jpg")
-                document.getElementById(tdId).append("Student" + tdId);
+                // document.getElementById(tdId).append("Student" + tdId);
+                $('#' + tdId + ' .containerSt').append('<span>Student' + tdId + '</span>');
             };
 
 
@@ -69,7 +70,7 @@ function popWindow(id){
 function addStHtml(i, j) {
     var id = i.toString() + j.toString();
     var fileName = id;
-    document.getElementById(id).innerHTML = '            <div class="containerSt">\n' +
+    document.getElementById(id).innerHTML = '            <div class="containerSt d-flex align-items-center justify-content-center">\n' +
         '                <img src= "'+ fileName +'.jpg" id="'+ "img" + id + '"  alt="crawford" style="width:100%">\n' +
         '                <button class="btnDot" name="dotBtn" id="'+ "dotBtn" + id + '">\n' +
         '                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots-vertical" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
@@ -77,7 +78,6 @@ function addStHtml(i, j) {
         '                    </svg>\n' +
         '                </button>\n' +
         '            </div>'
-
 
     // document.getElementById('foo').innerHTML = '<img src="img/apple_' + total + '.png" id="imageBox"/>'
 }
@@ -115,7 +115,7 @@ function generate_table(table_size) {
         }
         // add the row to the end of the table body
         tblBody.appendChild(row);
-        tbl.setAttribute("border", "transparent");
+        tbl.classList.add("border", "transparent");
     }
 
     // put the <tbody> in the <table>
