@@ -62,6 +62,12 @@
     max-width: 100px;
 }
 
+.modal-controls-container button {
+    white-space: normal;
+    font-size: 1.25rem;
+    max-width: 120px;
+}
+
 /* participant list */
 #participantList {
     margin-left: 50px;
