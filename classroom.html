@@ -14,20 +14,6 @@
     <title>Classroom</title>
 
     <script>
-        function muteAll()
-        {
-          $("p").change("fas fa-volume-mute");;
-        }
-    </script>
-
-    <script>
-        function hideVideo()
-        {
-        $("p").change("fas fa-video-slash");;
-        }
-    </script>
-
-    <script>
     function searchFilter() {
       var input, filter, ul, li, a, i, txtValue;
       input = document.getElementById('myInput');
@@ -242,7 +228,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2 panel" id="participantList">
+            <div class="col-sm-2 panel d-flex flex-column" id="participantList">
                 <div ><u>Participants:</u>&emsp;&emsp;&emsp;&emsp;&emsp;</div>
                 <br>
                 <ul id="myUL">
@@ -259,7 +245,7 @@
                     <li><a href="#">Billy W.</a></li>
                     <li><a href="#">Amber Z.</a></li>
                 </ul>
-                <div class="searchBtn">
+                <div class="searchBtn mt-auto">
                     <input type="text" id="myInput" onkeyup="searchFilter()" placeholder="Search Student">
                 </div>
             </div>
