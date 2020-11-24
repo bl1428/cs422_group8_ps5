@@ -38,7 +38,11 @@ $('i.video-icon.fa-ellipsis-h').on('click', function(evt) {
     let e = $(this);
     let modal = $('#studentOptionsModal');
 
-    let studentName = e.parent().siblings().children('span').text();
+    let studentName = e.parent().siblings().children('span').text();    // for modal controls
+
+    if (!studentName) { // for participant list
+        studentName = e.parent().text().replace(' Options', '');
+    }
     modal.find('.modal-title').html(studentName);
     modal.modal('show');
 });
@@ -134,3 +138,21 @@ $('body').on('click', '#msgGuardianBtn', function() {
     msgModal.modal('show');
 
 });
+
+function searchFilter() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+  
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("span")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }

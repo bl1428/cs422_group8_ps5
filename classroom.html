@@ -12,40 +12,6 @@
     <link rel="stylesheet" href="style/classroom.css">
 
     <title>Classroom</title>
-
-    <script>
-        function muteAll()
-        {
-          $("p").change("fas fa-volume-mute");;
-        }
-    </script>
-
-    <script>
-        function hideVideo()
-        {
-        $("p").change("fas fa-video-slash");;
-        }
-    </script>
-
-    <script>
-    function searchFilter() {
-      var input, filter, ul, li, a, i, txtValue;
-      input = document.getElementById('myInput');
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("myUL");
-      li = ul.getElementsByTagName('li');
-    
-      for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";
-        }
-      }
-    }
-    </script>
     
 </head>
 
@@ -252,47 +218,88 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2 panel" id="participantList">
+            <div class="col-sm-2 panel d-flex flex-column" id="participantList">
                 <div ><u>Participants:</u>&emsp;&emsp;&emsp;&emsp;&emsp;</div>
                 <br>
                 <ul id="myUL">
-                    <li><a href="#">Adam B.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Katya B.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Lisa D.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Kristen L.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Katie O.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Haley P.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                   
-                    <li><a href="#">Marty R.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Josh S.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Jessie S.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Sammy T.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Billy W.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
-                    
-                    <li><a href="#">Amber Z.
-                        <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                    <li>
+                        <span>
+                            Adam B.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Katya B.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Lisa D.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Kristen L.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Katie O.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Haley P.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Marty R.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Josh S.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Sammy T.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Billy W.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            Amber Z.
+                            <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
+                        </span>
+                    </li>
                 </ul>
-                <div class="searchBtn">
+                <div class="searchBtn mt-auto">
                     <input type="text" id="myInput" onkeyup="searchFilter()" placeholder="Search Student">
                 </div>
             </div>
