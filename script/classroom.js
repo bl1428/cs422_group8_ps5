@@ -40,6 +40,6 @@ $('i.video-icon.fa-ellipsis-h').on('click', (evt) => {
     modal.modal('show');
 });
 
-$('#startGroupBtn').on('click', () => {
-    // start group mode here
+$('body').on('click', '#startGroupBtn', () => {
+    window.location.href = "group_mode.html"
 });
