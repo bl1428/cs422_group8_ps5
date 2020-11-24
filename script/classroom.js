@@ -1,4 +1,6 @@
-var cnt = 1;
+var cntMute = 1;
+var cntHide = 1;
+
 $(document).ready(function() {
     
     // configure popover for group mode
@@ -84,20 +86,25 @@ $('#hideSelfBtn').on('click', function() {
 // toggle mute all btn
 $('#muteAllBtn').on('click', function() {
     setToggleBtnText($(this), 'Mute All', 'Mute audio for all students', 'Unmute All', 'Unmute audio for all students');
-    if(cnt % 2 != 0) {
-        $(" .fa-volume-up").hide();
-        $(" .fa-volume-off").show();
-        cnt += 1;
+    if(cntMute % 2 != 0) {
+        $('.fa-volume-up').removeClass('fa-volume-up').addClass('fa-volume-mute');
+        cntMute += 1;
     }else{
-        $(" .fa-volume-up").show();
-        $(" .fa-volume-off").hide();
-        cnt += 1;
+        $('.fa-volume-mute').removeClass('fa-volume-mute').addClass('fa-volume-up');
+        cntMute += 1;
     }
 });
 
 // toggle hide all btn
 $('#hideAllBtn').on('click', function() {
     setToggleBtnText($(this), 'Hide All', 'Stop video for all students', 'Show All', 'Start video for all students');
+    if(cntHide % 2 != 0) {
+        $('.fa-video').removeClass('fa-video').addClass('fa-video-slash');
+        cntHide += 1;
+    }else{
+        $('.fa-video-slash').removeClass('fa-video-slash').addClass('fa-video');
+        cntHide += 1;
+    }
 });
 
 $('body').on('click', '#msgGuardianBtn', function() {
