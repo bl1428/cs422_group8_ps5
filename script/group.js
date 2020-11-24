@@ -1,22 +1,23 @@
 
 $(document).ready(function()
 {
-
     generate_table(2);
     $( "#studentGroup" ).addClass( "center" );
+    var nameArray = ['Katya B.', 'Billy W.', 'Sammy T.', 'Lisa D.'];
+
     addStHtml(0, 0);
     addStHtml(0, 1);
     addStHtml(1, 0);
     addStHtml(1, 1);
-
-
 
         $(document).on('click', '.btnDot', function (){
 
 
             var tdId = this.id.split('dotBtn');
             tdId = tdId[1];
+            var indexStr = tdId.split('');
             console.log(tdId);
+            var array_index = parseInt(tdId[0]) + parseInt(tdId[1]);
             var imgId = "img"+ tdId;
             var modal = document.getElementById("myModal");
             // var btn = document.getElementById(btnId);
@@ -36,11 +37,12 @@ $(document).ready(function()
                 document.getElementById(imgId).style.display = "none";
                 // $("#" + imgId).attr("src", "01.jpg")
                 // document.getElementById(tdId).append("Student" + tdId);
-                // $('#' + tdId + ' .containerSt').append('<span>Student' + tdId + '</span>');
+                $('#' + tdId + ' .containerSt').append('<span class = "stdName">' + nameArray[array_index] + '</span>');
             };
 
 
             showVid.onclick = function () {
+                $('#' + tdId + ' .containerSt .stdName').remove();
                 document.getElementById(imgId).style.display = "inline-block"
             };
 
@@ -58,6 +60,8 @@ $(document).ready(function()
             }
         });
 
+        $('[data-toggle="tooltip"]').tooltip() // enable all bootstrap tooltips 
+
 
 
 
@@ -70,6 +74,8 @@ function popWindow(id){
         '        <span class="popuptext" id="myPopup">Popup text...</span>\n' +
         '    </div>'
 }
+
+
 
 
 
@@ -119,7 +125,7 @@ function generate_table(table_size) {
             cell.setAttribute("class", "tableTd");
             $(".cell").css({"text-align": "center"
             });
-            cell.append(rowText + (j + 1).toString());
+            // cell.append(rowText + (j + 1).toString());
             row.appendChild(cell);
         }
         // add the row to the end of the table body
@@ -133,3 +139,15 @@ function generate_table(table_size) {
     mainColumn.appendChild(tbl);
     //ref: mozilla
 }
+
+$('#backBtn').on('click', function() {
+    // get url params
+    target = 'group_mode3';
+    let urlParams = new URLSearchParams(window.location.search);
+    let source = urlParams.get('source');
+    if (source) {
+        target = source;
+    }
+    console.log(target);
+    window.location.href = target + '.html';
+});

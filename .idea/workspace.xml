@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70b8ba29-92d8-45d9-b465-1ecdf7cb8962" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/group.css" beforeDir="false" afterPath="$PROJECT_DIR$/group.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/group.html" beforeDir="false" afterPath="$PROJECT_DIR$/group.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/group.js" afterDir="false" />
     </list>
@@ -36,6 +35,7 @@
       <workItem from="1606099399032" duration="839000" />
       <workItem from="1606102782481" duration="47000" />
       <workItem from="1606171718566" duration="3000" />
+      <workItem from="1606183383103" duration="8000" />
     </task>
     <servers />
   </component>
