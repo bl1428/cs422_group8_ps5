@@ -9,9 +9,8 @@ $(document).ready(function() {
         `<div class="container d-flex">
         <span>Number of Groups:</span>
         <select class="custom-select ml-2" id="groupModeSelect">
-        <option selected>Choose...</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3" selected>3</option>
         <option value="4">4</option>
         </select>
         </div>
@@ -41,5 +40,19 @@ $('i.video-icon.fa-ellipsis-h').on('click', (evt) => {
 });
 
 $('body').on('click', '#startGroupBtn', () => {
-    window.location.href = "group_mode.html"
+    // window.location.href = "group_mode.html";
+    let select = $('#groupModeSelect');
+    switch (select.val()) {
+        case '2':
+            window.location.href = 'group_mode2.html';
+            break;
+        case '3':
+            window.location.href = 'group_mode3.html';
+            break;
+        case '4':
+            window.location.href = 'group_mode4.html';
+            break;
+        default:
+            break;
+    }
 });
