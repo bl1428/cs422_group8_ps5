@@ -9,7 +9,6 @@ $(document).ready(function() {
         `<div class="container d-flex">
         <span>Number of Groups:</span>
         <select class="custom-select ml-2" id="groupModeSelect">
-        <option value="2">2</option>
         <option value="3" selected>3</option>
         <option value="4">4</option>
         </select>
@@ -43,9 +42,6 @@ $('i.video-icon.fa-ellipsis-h').on('click', function(evt) {
 $('body').on('click', '#startGroupBtn', () => {
     let select = $('#groupModeSelect');
     switch (select.val()) {
-        case '2':
-            window.location.href = 'group_mode2.html';
-            break;
         case '3':
             window.location.href = 'group_mode3.html';
             break;
