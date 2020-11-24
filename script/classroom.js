@@ -1,3 +1,4 @@
+var cnt = 1;
 $(document).ready(function() {
     
     // configure popover for group mode
@@ -83,6 +84,15 @@ $('#hideSelfBtn').on('click', function() {
 // toggle mute all btn
 $('#muteAllBtn').on('click', function() {
     setToggleBtnText($(this), 'Mute All', 'Mute audio for all students', 'Unmute All', 'Unmute audio for all students');
+    if(cnt % 2 != 0) {
+        $(" .fa-volume-up").hide();
+        $(" .fa-volume-off").show();
+        cnt += 1;
+    }else{
+        $(" .fa-volume-up").show();
+        $(" .fa-volume-off").hide();
+        cnt += 1;
+    }
 });
 
 // toggle hide all btn
