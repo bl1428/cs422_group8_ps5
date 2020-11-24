@@ -126,7 +126,7 @@
                                 </div>
                                 <div class="d-flex participant-controls">
                                     <i class="fas fa-video video-icon"></i>
-                                    <i class="fas fa-volume-up video-icon"></i>
+                                    <i class="fas fa-volume-up video-icon"></i>        
                                     <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i>
                                 </div>
                             </div>
@@ -221,11 +221,21 @@
                     </div>
 
                     <div class="row mt-auto mb-5 controls-container">
-                        <div class="container-fluid d-flex justify-content-end">
-                            <button type="button" class="btn btn-success mr-auto" id="groupModeBtn">
+                        <div class="container-fluid d-flex justify-content-end align-items-end">
+                            <button type="button" class="btn btn-success" id="groupModeBtn">
                                 Group Mode
                             </button>
-                            <button type="button" class="btn btn-info" id="muteSelfBtn">
+                            <div class="teacher-video-pane ml-auto">
+                                <div class="d-flex justify-content-center align-items-center participant-name">
+                                    <span>You</span>
+                                </div>
+                                <div class="d-flex participant-controls">
+                                    <i class="fas fa-video video-icon"></i>
+                                    <i class="fas fa-volume-up video-icon"></i>
+                                    <!-- <i class="fas fa-ellipsis-h video-icon ml-auto" data-toggle="tooltip" title="Options"></i> -->
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-info ml-5" id="muteSelfBtn">
                                 Mute Self
                             </button>
                             <button type="button" class="btn btn-info ml-3" id="hideSelfBtn">

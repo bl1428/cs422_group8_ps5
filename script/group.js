@@ -16,8 +16,9 @@ $(document).ready(function()
             var tdId = this.id.split('dotBtn');
             tdId = tdId[1];
             var indexStr = tdId.split('');
+            var array_index = parseInt(tdId, 2);
             console.log(tdId);
-            var array_index = parseInt(tdId[0]) + parseInt(tdId[1]);
+            console.log(array_index);
             var imgId = "img"+ tdId;
             var modal = document.getElementById("myModal");
             // var btn = document.getElementById(btnId);
