@@ -1,5 +1,7 @@
 var cntMute = 1;
 var cntHide = 1;
+var cntMuteSelf = 1;
+var cntHideSelf = 1;
 
 $(document).ready(function() {
     
@@ -76,21 +78,35 @@ function setToggleBtnText(button, onText, onTooltip, offText, offTooltip) {
 // toggle mute self btn
 $('#muteSelfBtn').on('click', function() {
     setToggleBtnText($(this), 'Mute Self', 'Mute your audio', 'Unmute Self', 'Unmute your audio');
+    if(cntMuteSelf % 2 != 0) {
+        $('.teacher-video-pane .fa-volume-up').removeClass('fa-volume-up').addClass('fa-volume-mute');
+        cntMuteSelf += 1;
+    }else{
+        $('.teacher-video-pane .fa-volume-mute').removeClass('fa-volume-mute').addClass('fa-volume-up');
+        cntMuteSelf += 1;
+    }
 });
 
 // toggle hide self btn
 $('#hideSelfBtn').on('click', function() {
     setToggleBtnText($(this), 'Hide Self', 'Stop your video', 'Show Self', 'Start your video');
+    if(cntHideSelf % 2 != 0) {
+        $('.teacher-video-pane .fa-video').removeClass('fa-video').addClass('fa-video-slash');
+        cntHideSelf += 1;
+    }else{
+        $('.teacher-video-pane .fa-video-slash').removeClass('fa-video-slash').addClass('fa-video');
+        cntHideSelf += 1;
+    }
 });
 
 // toggle mute all btn
 $('#muteAllBtn').on('click', function() {
     setToggleBtnText($(this), 'Mute All', 'Mute audio for all students', 'Unmute All', 'Unmute audio for all students');
     if(cntMute % 2 != 0) {
-        $('.fa-volume-up').removeClass('fa-volume-up').addClass('fa-volume-mute');
+        $('.video-pane .fa-volume-up').removeClass('fa-volume-up').addClass('fa-volume-mute');
         cntMute += 1;
     }else{
-        $('.fa-volume-mute').removeClass('fa-volume-mute').addClass('fa-volume-up');
+        $('.video-pane .fa-volume-mute').removeClass('fa-volume-mute').addClass('fa-volume-up');
         cntMute += 1;
     }
 });
@@ -99,10 +115,10 @@ $('#muteAllBtn').on('click', function() {
 $('#hideAllBtn').on('click', function() {
     setToggleBtnText($(this), 'Hide All', 'Stop video for all students', 'Show All', 'Start video for all students');
     if(cntHide % 2 != 0) {
-        $('.fa-video').removeClass('fa-video').addClass('fa-video-slash');
+        $('.video-pane .fa-video').removeClass('fa-video').addClass('fa-video-slash');
         cntHide += 1;
     }else{
-        $('.fa-video-slash').removeClass('fa-video-slash').addClass('fa-video');
+        $('.video-pane .fa-video-slash').removeClass('fa-video-slash').addClass('fa-video');
         cntHide += 1;
     }
 });

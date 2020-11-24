@@ -27,7 +27,7 @@
     height: 100%;
 }
 
-.video-pane {
+.video-pane, .teacher-video-pane {
     height: 150px;
     width: 200px;
     border: 1px solid #707070;
@@ -35,12 +35,17 @@
     box-shadow: 2px 2px 8px #888888;
 }
 
-.video-pane > .participant-name {
+.teacher-video-pane {
+    height: 100px;
+    width: 150px;
+}
+
+.video-pane > .participant-name, .teacher-video-pane > .participant-name {
     height: 80%;
     font-size: 20pt;
 }
 
-.video-pane > .participant-controls {
+.video-pane > .participant-controls, .teacher-video-pane > .participant-controls {
     padding: 0px 10px;
 }
 
@@ -60,6 +65,7 @@
     white-space: normal;
     font-size: 1.5rem;
     max-width: 100px;
+    max-height: 100px;
 }
 
 .modal-controls-container button {
