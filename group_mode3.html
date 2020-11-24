@@ -12,13 +12,15 @@
     <title>Group Mode</title>
   </head>
   <body>
-    <h1>Group Mode</h1>
-    <a href="classroom.html" class="btn btn-primary float-right">Back To Classroom</a>
+    <div class="container-fluid d-flex justify-content-start mt-2">
+      <span class="page-title">Group Mode</span>
+      <a href="classroom.html" class="btn btn-primary float-right ml-auto mr-2" data-toggle="tooltip" data-placement="left" title="End group mode & return to classroom" id="backBtn">Back To Classroom</a>
+    </div>
 
   <div class="container">
   <div class="row">
     <!-- col-md-4 -->
-    <div class="column" id="firstColumn" onclick="location.href='group.html';" style="cursor: pointer;">
+    <div class="column" id="firstColumn" onclick="location.href='group.html';" style="cursor: pointer;" data-toggle="tooltip" data-placement="top" title="This group requires assistance">
       <h2 style="color:red;">Group 1 !!!!</h2>
       <div id="firstSquare">
         <h4>Katya B.</h4>
@@ -78,5 +80,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $('[data-toggle="tooltip"]').tooltip() // enable all bootstrap tooltips
+    </script>
   </body>
 </html>
