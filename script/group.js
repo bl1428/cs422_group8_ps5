@@ -3,7 +3,7 @@ $(document).ready(function()
 {
     generate_table(2);
     $( "#studentGroup" ).addClass( "center" );
-    var nameArray = ['Katya', 'Billy', 'Sammy', 'Lisa'];
+    var nameArray = ['Katya B.', 'Billy W.', 'Sammy T.', 'Lisa D.'];
 
     addStHtml(0, 0);
     addStHtml(0, 1);
