@@ -12,6 +12,41 @@
     <link rel="stylesheet" href="style/classroom.css">
 
     <title>Classroom</title>
+
+    <script>
+        function muteAll()
+        {
+          $("p").change("fas fa-volume-mute");;
+        }
+    </script>
+
+    <script>
+        function hideVideo()
+        {
+        $("p").change("fas fa-video-slash");;
+        }
+    </script>
+
+    <script>
+    function searchFilter() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+    
 </head>
 
 <body>
@@ -221,18 +256,23 @@
             <div class="col-sm-2 panel" id="participantList">
                 <div ><u>Participants:</u>&emsp;&emsp;&emsp;&emsp;&emsp;</div>
                 <br>
-                <div >Adam B.</div>
-                <div>Katya B.</div>
-                <div>Lisa D.</div>
-                <div>Janice K.</div>
-                <div>Kristen L.</div>
-                <div>Naween N.</div>
-                <div>Katie O.</div>
-                <div>Haley P.</div>
-                <div>Marty R.</div>
-                <div>Josh S.</div>
-                <div>Jessie S.</div>
-                <div>Sammy T.</div>   
+                <ul id="myUL">
+                    <li><a href="#">Adam B.</a></li>
+                    <li><a href="#">Katya B.</a></li>
+                    <li><a href="#">Lisa D.</a></li>
+                    <li><a href="#">Kristen L.</a></li>
+                    <li><a href="#">Katie O.</a></li>
+                    <li><a href="#">Haley P.</a></li>
+                    <li><a href="#">Marty R.</a></li>
+                    <li><a href="#">Josh S.</a></li>
+                    <li><a href="#">Jessie S.</a></li>
+                    <li><a href="#">Sammy T.</a></li>
+                    <li><a href="#">Billy W.</a></li>
+                    <li><a href="#">Amber Z.</a></li>
+                </ul>
+                <div class="searchBtn">
+                    <input type="text" id="myInput" onkeyup="searchFilter()" placeholder="Search Student">
+                </div>
             </div>
         </div>
     </div>
@@ -282,10 +322,31 @@
                             </div>
                             <div class="col-sm-4">
                                 <button type="button" class="btn btn-secondary allow-text-wrap" data-toggle="tooltip"
-                                    title="Compose a message to student's guardian">Message Guardian</button>
+                                    title="Compose a message to student's guardian" id="msgGuardianBtn">Message Guardian</button>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Guardian modal -->
+    <div class="modal fade" id="msgGuardianModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="msgGuardianModal">End Class?</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea rows="5" cols="50" id="msgInput" placeholder="Type your message here..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="sendMsgBtn" data-dismiss="modal">Send</button>
                 </div>
             </div>
         </div>

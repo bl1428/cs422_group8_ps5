@@ -3,7 +3,7 @@ $(document).ready(function()
 {
     generate_table(2);
     $( "#studentGroup" ).addClass( "center" );
-    var nameArray = ['Katya', 'Billy', 'Sammy', 'Lisa'];
+    var nameArray = ['Katya B.', 'Billy W.', 'Sammy T.', 'Lisa D.'];
 
     addStHtml(0, 0);
     addStHtml(0, 1);
@@ -59,6 +59,8 @@ $(document).ready(function()
                 }
             }
         });
+
+        $('[data-toggle="tooltip"]').tooltip() // enable all bootstrap tooltips 
 
 
 
@@ -137,3 +139,15 @@ function generate_table(table_size) {
     mainColumn.appendChild(tbl);
     //ref: mozilla
 }
+
+$('#backBtn').on('click', function() {
+    // get url params
+    target = 'group_mode3';
+    let urlParams = new URLSearchParams(window.location.search);
+    let source = urlParams.get('source');
+    if (source) {
+        target = source;
+    }
+    console.log(target);
+    window.location.href = target + '.html';
+});
