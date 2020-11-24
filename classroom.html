@@ -12,6 +12,41 @@
     <link rel="stylesheet" href="style/classroom.css">
 
     <title>Classroom</title>
+
+    <script>
+        function muteAll()
+        {
+          $("p").change("fas fa-volume-mute");;
+        }
+    </script>
+
+    <script>
+        function hideVideo()
+        {
+        $("p").change("fas fa-video-slash");;
+        }
+    </script>
+
+    <script>
+    function searchFilter() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+    
 </head>
 
 <body>
@@ -210,18 +245,23 @@
             <div class="col-sm-2 panel" id="participantList">
                 <div ><u>Participants:</u>&emsp;&emsp;&emsp;&emsp;&emsp;</div>
                 <br>
-                <div >Adam B.</div>
-                <div>Katya B.</div>
-                <div>Lisa D.</div>
-                <div>Kristen L.</div>
-                <div>Katie O.</div>
-                <div>Haley P.</div>
-                <div>Marty R.</div>
-                <div>Josh S.</div>
-                <div>Jessie S.</div>
-                <div>Sammy T.</div>
-                <div>Billy W.</div>
-                <div>Amber Z.</div>
+                <ul id="myUL">
+                    <li><a href="#">Adam B.</a></li>
+                    <li><a href="#">Katya B.</a></li>
+                    <li><a href="#">Lisa D.</a></li>
+                    <li><a href="#">Kristen L.</a></li>
+                    <li><a href="#">Katie O.</a></li>
+                    <li><a href="#">Haley P.</a></li>
+                    <li><a href="#">Marty R.</a></li>
+                    <li><a href="#">Josh S.</a></li>
+                    <li><a href="#">Jessie S.</a></li>
+                    <li><a href="#">Sammy T.</a></li>
+                    <li><a href="#">Billy W.</a></li>
+                    <li><a href="#">Amber Z.</a></li>
+                </ul>
+                <div class="searchBtn">
+                    <input type="text" id="myInput" onkeyup="searchFilter()" placeholder="Search Student">
+                </div>
             </div>
         </div>
     </div>
