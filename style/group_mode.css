@@ -1,5 +1,7 @@
-h1 {
-  text-align: center;
+.page-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #686868;
 }
 h2 {
   height: 17.5%;
@@ -8,6 +10,13 @@ h2 {
 h4 {
   padding-top: 45px;
   text-align: center;
+}
+
+#backBtn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: normal;
+  max-width: 150px;
 }
 
 .row {
