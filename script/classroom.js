@@ -89,3 +89,15 @@ $('#muteAllBtn').on('click', function() {
 $('#hideAllBtn').on('click', function() {
     setToggleBtnText($(this), 'Hide All', 'Stop video for all students', 'Show All', 'Start video for all students');
 });
+
+$('body').on('click', '#msgGuardianBtn', function() {
+    let optModal = $('#studentOptionsModal');
+    const studentName = optModal.find('.modal-title').text();
+    $('#studentOptionsModal').modal('hide');    // hide student options modal
+
+    let msgModal = $('#msgGuardianModal');
+    msgModal.find('.modal-title').html('Message to ' + studentName + "'s guardian");
+    msgModal.find('textarea').val('');
+    msgModal.modal('show');
+
+});
