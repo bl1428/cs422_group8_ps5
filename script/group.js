@@ -37,11 +37,12 @@ $(document).ready(function()
                 document.getElementById(imgId).style.display = "none";
                 // $("#" + imgId).attr("src", "01.jpg")
                 // document.getElementById(tdId).append("Student" + tdId);
-                $('#' + tdId + ' .containerSt').append('<span>' + nameArray[array_index] + '</span>');
+                $('#' + tdId + ' .containerSt').append('<span class = "stdName">' + nameArray[array_index] + '</span>');
             };
 
 
             showVid.onclick = function () {
+                $('#' + tdId + ' .containerSt .stdName').remove();
                 document.getElementById(imgId).style.display = "inline-block"
             };
 
