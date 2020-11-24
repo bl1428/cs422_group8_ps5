@@ -1,0 +1,78 @@
+h1 {
+  text-align: center;
+}
+h2 {
+  height: 17.5%;
+  text-align: center;
+}
+h4 {
+  padding-top: 45px;
+  text-align: center;
+}
+
+.row {
+  padding-top: 20px
+}
+
+#firstColumn {
+  outline: 1px solid red;
+  height: 300px;
+  width: 45%;
+}
+
+#mainColumn {
+  outline: 1px solid black;
+  height: 300px;
+  /* padding-left: 10px; */
+  width: 45%;
+}
+#splitColumn {
+  width: 2%;
+}
+
+#lastColumn {
+  outline: 1px solid black;
+  height: 300px;
+  /* padding-left: 10px; */
+  width: 45%;
+}
+
+#nextColumn {
+  outline: 1px solid black;
+  height: 300px;
+  /* padding-left: 10px; */
+  width: 45%;
+}
+
+#firstSquare {
+  text-align: center;
+  width: 50%;
+  height: 40%;
+  float: left;
+  background: #ccc;
+}
+
+#secondSquare {
+  width: 50%;
+  height: 40%;
+  float: left;
+  background: #bbb;
+  border-left: 1px solid #000;
+}
+
+#thirdSquare {
+  width: 50%;
+  height: 40%;
+  float: left;
+  background: #aaa;
+  border-top: 1px solid #000;
+}
+
+#fourthSquare {
+  width: 50%;
+  height: 40%;
+  float: left;
+  background: #ddd;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+}
