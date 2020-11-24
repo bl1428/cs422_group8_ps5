@@ -1,22 +1,23 @@
 
 $(document).ready(function()
 {
-
     generate_table(2);
     $( "#studentGroup" ).addClass( "center" );
+    var nameArray = ['Katya', 'Billy', 'Sammy', 'Lisa'];
+
     addStHtml(0, 0);
     addStHtml(0, 1);
     addStHtml(1, 0);
     addStHtml(1, 1);
-
-
 
         $(document).on('click', '.btnDot', function (){
 
 
             var tdId = this.id.split('dotBtn');
             tdId = tdId[1];
+            var indexStr = tdId.split('');
             console.log(tdId);
+            var array_index = parseInt(tdId[0]) + parseInt(tdId[1]);
             var imgId = "img"+ tdId;
             var modal = document.getElementById("myModal");
             // var btn = document.getElementById(btnId);
@@ -36,7 +37,7 @@ $(document).ready(function()
                 document.getElementById(imgId).style.display = "none";
                 // $("#" + imgId).attr("src", "01.jpg")
                 // document.getElementById(tdId).append("Student" + tdId);
-                // $('#' + tdId + ' .containerSt').append('<span>Student' + tdId + '</span>');
+                $('#' + tdId + ' .containerSt').append('<span>' + nameArray[array_index] + '</span>');
             };
 
 
@@ -70,6 +71,8 @@ function popWindow(id){
         '        <span class="popuptext" id="myPopup">Popup text...</span>\n' +
         '    </div>'
 }
+
+
 
 
 
@@ -119,7 +122,7 @@ function generate_table(table_size) {
             cell.setAttribute("class", "tableTd");
             $(".cell").css({"text-align": "center"
             });
-            cell.append(rowText + (j + 1).toString());
+            // cell.append(rowText + (j + 1).toString());
             row.appendChild(cell);
         }
         // add the row to the end of the table body
