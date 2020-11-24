@@ -56,3 +56,40 @@ $('body').on('click', '#startGroupBtn', () => {
             break;
     }
 });
+
+// helper for button toggling
+function setToggleBtnText(button, onText, onTooltip, offText, offTooltip) {
+    let curr = button.text().trim();
+
+    if (curr === onText) {
+        button.text(offText);
+        button.tooltip('hide')
+            .attr('data-original-title', offTooltip)
+            .tooltip('show');
+    } else {
+        button.text(onText);
+        button.tooltip('hide')
+            .attr('data-original-title', onTooltip)
+            .tooltip('show');
+    }
+}
+
+// toggle mute self btn
+$('#muteSelfBtn').on('click', function() {
+    setToggleBtnText($(this), 'Mute Self', 'Mute your audio', 'Unmute Self', 'Unmute your audio');
+});
+
+// toggle hide self btn
+$('#hideSelfBtn').on('click', function() {
+    setToggleBtnText($(this), 'Hide Self', 'Stop your video', 'Show Self', 'Start your video');
+});
+
+// toggle mute all btn
+$('#muteAllBtn').on('click', function() {
+    setToggleBtnText($(this), 'Mute All', 'Mute audio for all students', 'Unmute All', 'Unmute audio for all students');
+});
+
+// toggle hide all btn
+$('#hideAllBtn').on('click', function() {
+    setToggleBtnText($(this), 'Hide All', 'Stop video for all students', 'Show All', 'Start video for all students');
+});
